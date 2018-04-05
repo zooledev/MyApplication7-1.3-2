@@ -1,0 +1,51 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:Idő="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.zoole.myapplication7.AnalogUtasitasok">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Megszakítások"
+                style="@style/bekezdes"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/megszakitasok"
+                style="@style/szovegtorzs"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/megszakitasok"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/megszakitasok2"
+                style="@style/szovegtorzs"
+                android:layout_marginBottom="30dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>
+
+
+

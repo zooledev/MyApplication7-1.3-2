@@ -1,0 +1,228 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.zoole.myapplication7.VezUtasitasok">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vezérlési utasítások:"
+                style="@style/bekezdes" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/bekezdes2"
+                android:text="if („ha” összehasonlító operátor)" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/vez_utasitasok"
+                style="@style/szovegtorzs" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                style="@style/program"
+                android:text="@string/vez_utasitasok1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="IF...ELSE"
+                android:layout_marginTop="30dp"
+                style="@style/bekezdes2"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/if_else"
+                style="@style/szovegtorzs" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/if_else_prog"
+                style="@style/program"
+                android:layout_marginTop="30dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Vagy pedig így is lehet:"
+                style="@style/bekezdes2"
+                android:layout_marginTop="25dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/igy_is_lehet"
+                style="@style/program"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="25dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="For ciklus"
+                style="@style/bekezdes2"
+                android:layout_marginTop="25dp" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/for_ciklus"
+                style="@style/szovegtorzs" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Switch case"
+                style="@style/bekezdes2"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/szovegtorzs"
+                android:text="@string/switch_case"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/switch_case_prog"
+                style="@style/program"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="While"
+                style="@style/bekezdes2"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/While"
+                style="@style/szovegtorzs" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="while(kifejezés){ utasítás }"
+                style="@style/program"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/while_prog2"
+                style="@style/program" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="do... while"
+                style="@style/bekezdes2"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/do_while"
+                style="@style/szovegtorzs"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/do_while_prog2"
+                style="@style/program"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="break"
+                style="@style/bekezdes2"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/break2"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/break_prog"
+                style="@style/program"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="continue"
+                style="@style/bekezdes2"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/continue2"
+                style="@style/szovegtorzs"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="return"
+                style="@style/bekezdes2"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/return2"
+                style="@style/szovegtorzs"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/return_prog"
+                style="@style/program"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="goto "
+                style="@style/bekezdes2"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/goto2"
+                style="@style/szovegtorzs"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/goto_prog"
+                style="@style/program"
+                android:layout_marginBottom="30dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

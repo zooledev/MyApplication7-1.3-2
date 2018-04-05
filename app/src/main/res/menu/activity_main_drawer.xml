@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    android:background="@drawable/ic_launcher_background"
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/fooldal"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Főoldal"/>
+
+        <item
+            android:id="@+id/bevezeto"
+            android:icon="@drawable/ic_reorder_black_24dp"
+            android:title="Bevezető" />
+
+        <item
+            android:id="@+id/kivezetesek"
+            android:icon="@drawable/ic_reorder_black_24dp"
+            android:title="Kivezetések" />
+        <item
+            android:id="@+id/fesz_pin"
+            android:icon="@drawable/ic_arrow_forward_black_24dp"
+            android:title="     Feszültség  pin"
+            />
+        <item
+            android:id="@+id/kom_pin"
+            android:icon="@drawable/ic_arrow_forward_black_24dp"
+            android:title="     Kommunikációs  pin"
+            />
+        <item
+            android:id="@+id/strukturalis_felepites"
+            android:icon="@drawable/ic_reorder_black_24dp"
+            android:title="A program strukturája"
+            />
+        <item
+            android:id="@+id/utasitasok"
+            android:icon="@drawable/ic_reorder_black_24dp"
+            android:title="Az arduino utasításai"
+            />
+        <item
+            android:id="@+id/vez_utasit"
+            android:icon="@drawable/ic_arrow_forward_black_24dp"
+            android:title="     Vezérlési utasítások"
+            />
+        <item
+            android:id="@+id/irasjelek"
+            android:icon="@drawable/ic_arrow_forward_black_24dp"
+            android:title="     Írásjelek"
+            />
+        <item
+            android:id="@+id/valtozok"
+            android:icon="@drawable/ic_arrow_forward_black_24dp"
+            android:title="     Változók"
+            />
+
+        <item
+            android:id="@+id/dig_ki_bemenetek"
+            android:icon="@drawable/ic_arrow_forward_black_24dp"
+            android:title="     Digitális ki és bemenetek" />
+        <item
+            android:id="@+id/analog_utasitasok"
+            android:icon="@drawable/ic_arrow_forward_black_24dp"
+            android:title="     Analóg utasítások" />
+        <item
+            android:id="@+id/pwm_pinek"
+            android:icon="@drawable/ic_arrow_forward_black_24dp"
+            android:title="     Pwm pinek" />
+        <item
+            android:id="@+id/fejlett_kibe"
+            android:icon="@drawable/ic_arrow_forward_black_24dp"
+            android:title="     Fejlett ki és bemenetek" />
+        <item
+            android:id="@+id/idozitesek"
+            android:icon="@drawable/ic_arrow_forward_black_24dp"
+            android:title="     Időzítések" />
+        <item
+            android:id="@+id/math"
+            android:icon="@drawable/ic_arrow_forward_black_24dp"
+            android:title="     Matematikai függvények" />
+        <item
+            android:id="@+id/trig"
+            android:icon="@drawable/ic_arrow_forward_black_24dp"
+            android:title="     Trigonometriai függvények" />
+        <item
+            android:id="@+id/veletlen"
+            android:icon="@drawable/ic_arrow_forward_black_24dp"
+            android:title="     Véletlen számok" />
+        <item
+            android:id="@+id/bit"
+            android:icon="@drawable/ic_arrow_forward_black_24dp"
+            android:title="     Bitek és bájtok" />
+        <item
+            android:id="@+id/kulso_megszakitasok"
+            android:icon="@drawable/ic_arrow_forward_black_24dp"
+            android:title="     Külső megszakítások" />
+        <item
+            android:id="@+id/megszakitasok"
+            android:icon="@drawable/ic_arrow_forward_black_24dp"
+            android:title="     Megszakítások" />
+        <item
+            android:id="@+id/comm"
+            android:icon="@drawable/ic_arrow_forward_black_24dp"
+            android:title="     Kommunikáció" />
+
+
+    </group>
+
+
+
+</menu>

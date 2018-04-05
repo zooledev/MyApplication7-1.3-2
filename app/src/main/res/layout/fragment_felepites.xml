@@ -1,0 +1,40 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.zoole.myapplication7.Felepites">
+
+        <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/felépítés"
+                style="@style/bekezdes2" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/felepites2"
+                style="@style/szovegtorzs"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                style="@style/program"
+                android:text="@string/felepites_prog"
+                android:layout_marginBottom="30dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

@@ -1,0 +1,650 @@
+<resources>
+    <string name="app_name">Arduino kezdőknek</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Bevezeto">A mikrokontroller / mikro vezérlő egyetlen lapkára integrált, általában vezérlési feladatokra optimalizált cél-számítógép.\n
+        A mikrokontroller egy mikroprocesszor kiegészítve az áramköri lapkájára integrált perifériákkal. \n
+        Manapság sok hétköznapi használati eszközben is mikrokontroller lapul a digitális hőmérőtől az autónkon át akár a gyorséttermi ajándék játékig.\n
+        Régebben mikroprocesszor-típusokat használtak a vezérlési feladatok elvégzésére. A mikroprocesszor használatakor a szükséges perifériák miatt további IC-ket kellett beépíteni. Az áramköri technológia fejlődésével egyre több perifériát az IC tokba lehetett integrálni, így alakult ki a mikrokontroller, nagyon tömör áramkört eredményezve.
+        A mikrokontroller az ellátandó feladatától függően sok perifériát tartalmazhat. Minden egyes perifériának fogyasztása van (amely függ a periféria állapotától, annak beállításaitól), amelyek összeadódnak és a mikrokontroller összfogyasztását növelik. A fölösleges fogyasztások elkerülése végett az egyes perifériák ki - ill. bekapcsolhatóak akár a program futása folyamán is.
+         </string>
+    <string name="Bevezeto3"><b>Gyakran előforduló perifériák:</b>\n
+        -Oszcillátor: órajelet ad a processzor számára, ezen kívül egy számláló vezérlésével időmérésre is használható\n
+        -Operatív tár: a vezérlőprogram tárolására használható a ROM és a futás közbeni adatok tárolására a RAM\n
+        -Számlálók/időzítők: ezeket külső és belső jelek segítségével lehet léptetni. \n
+        Használhatók egyszerű impulzusszámlálási feladatokra és frekvenciamérésre is.\n
+        -Watchdog időzítő: biztonsági eszköz a működtető program "lefagyása" ellen. Egy időzítő, melyet a szoftvernek periodikusan nullázni kell. Ha nem teszi, akkor a watchdog áramkör hardveresen újraindítja a mikrokontrollert, amitől talán elmúlik a lefagyást előidéző állapot.\
+        -EEPROM memória: kalibrációs adatok vagy más paraméterek, és adatok tárolására szolgál. A tápfeszültség elvesztése után is megőrzi a tartalmát.
+        -DSP (digitális jel-processzor): a nagysebességű digitális jelfeldolgozáshoz szükséges különleges számítási műveleteket gyorsító számolóegység\n
+        <b>Jelátalakítók:</b>
+        Analóg-digitális átalakító (A/D konverter) a külső analóg jeleket (feszültséget) digitális formába, a processzor által feldolgozhatóvá alakítja.\n
+        Digitális-analóg átalakító (D/A konverter) a belső digitális jeleket alakítja át analóg jelekké.\n
+        Komparátor: két analóg feszültséget hasonlít össze.\n
+        Kommunikációs interfészek, buszok: a különböző eszközök egymással történő kommunikációját valósítják meg.\n
+        <b>I2C</b> (Inter-Integrated Circuit) busz I2C \n
+        <b>UART </b>(Universal Asynchron Receiver/Transmitter) univerzális asszinkron adóvevő\n
+        <b>SPI</b> (Serial Peripheral Interface) busz,\n
+        <b>CAN</b> (Controller Area Network) busz,\n
+        <b>Ethernet</b>, a hállózati eléréshez\n
+        <b>1-Wire</b>, egy vezetékes érzékelőkhöz\n
+        <b>USB</b>, ( universal serial bus)\n
+        <b>Parallel port</b> külső párhuzamos busz\n
+        Memória jellegű tárok kezelés\n
+        Párhuzamos adat- és címbuszú memóriák kezelése\n
+        <b>Meghajtó egységek:</b>\n
+        LCD-panel meghajtók\n
+        LED kijelző meghajtók\n
+        <b>Jelgenerátorok:</b>\nJelgenerátorok:
+        PWM: analóg kimenetekhez használják (kvázi analóg jelet állít elő) négyszögjel elállítása megfelelő kitöltéssel, a kitöltési tényező változtatása \n
+        Debug interface: a mikrokontroller hibakereséséhez és programállapot-figyeléshez. A program futtatását teszi lehetővé, miközben össze van kötve egy számítógéppel. \n
+        Így a futás jellemzőit nyomon lehet követni: regisztereket, memóriát meg lehet nézni. \n
+        A program futását le lehet állítani, majd újra lehet indítani.</string>
+    <string name="Bevezeto2">Az Arduino maga a kontroller és a fejlesztői környezet neve is.\n
+        A panelek kialakítása nagyon sok fajta lehet. Több féle mikrokontrollerrel is lehet szerelve.\n
+        A panelek DC 5V-ról működnek. A dc csatlakozón keresztül vagy az USB csatlakozón keresztül. \n
+        Jumperrel kiválasztható hogy a tápfeszültséget honnan kapja a panel. A kisebb nano paneleken nincs DC csatlakozó csak forrpont. \n
+        A panelek reset gombbal vannak ellátva, amely megszakítja a program futását és újraindítható a panel.\n
+        Ki/ vagy bemeneti port (0-13 lábig) 14db található áramerősségük 40mA. Alapesetben minden pin bemenetként van konfigurálva ezt külön nem kell megváltoztatni csak ha kimenetként akarjuk használni. \n
+        A bemeneteken a chipen belül egy-egy 20-80 kohmos felhúzó ellenállás van. Ha a lábak bemenetre vannak állítva akkor a lábra történő kiírással. \n
+        Viszont ez nem változtatja meg a láb adatirányát.</string>
+    <string name="kivezetesek1">
+         A 0-ás és 1-es láb RX és TX TTL soros port kommunikáció használatához van, RX fogad, TX küld. 2 és 3 pin külső megszakításhoz, a csatlakozón fellépő fel- vagy lefutó él hatására fellépő megszakításkérés, ami a mikro vezérlő valamelyik bemenetének értékváltozására generálódik. \n
+        PWM pinek (3, 5, 6, 9, 10, 11,) \n
+
+        LED \n
+        13. pin, a beépített LED ide van kivezetve, HIGH (be) vagy LOW (ki) állapota lehet.\n
+        Analóg pinek\n
+        6db. A0-tól A5-ig jekölve az analóg bemeneteket.</string>
+    <string name="kivezetesek2">
+        Ha a shield-en van a reset gomb, akkor ezt LOW-ra kell állítani. \n
+        Az áramkör negatív logikával resetelhető, tehát a reset kivezetést kell testre kötni.</string>
+    <string name="kom_pin2">
+        A 10-13 láb, SPI busz (Serial Peripheral Interface=soros perifériaillesztő).
+        Ezen a csatlakozón keresztül tölthetjük fel az Arduino alapprogramját, a bootloadert is, ezért megtalálható minden típusú alaplapon ugyanebben a formában.\n
+        Az SD kártyák is SPI buszon kommunikálnak, amiket viszonylag könnyen és nagyon sokféleképpen hasznosíthatunk arduinos projektjeinkben (háttértár, hangfelvétel, lejátszás, adatrögzítés, GPS).\n
+        Az SPI kivezetéseit megtalálhatjuk az Arduino alaplapján egy külön csatlakozón is, amit ICSP-nek (In Circuit Serial Programming) hívunk.\n
+        Az ICSP kivezetései a következő\n
+        MISO (Master In Slave Out), amin keresztül a mester fogad adatokat.\n
+        MOSI (Master Out Slave In), amin a szolgák fogadnak adatokat.\n
+        SCK (Serial Clock) órajel a szinkronizáláshoz.\n
+        SS (Slave Select) Az eszközönként specifikus vonal az engedélyezéshez. Amikor egy szolga SS vonala logikai alacsony szintre kerül, létrejön a kapcsolata a mesterrel, ha magas szinten tartjuk, akkor teljesen kimarad a buszon való kommunikációból, így nem zavarhatja a többi perifériát.</string>
+    <string name="fesz_pin1"><b>V in</b> \n
+        Bemeneti feszültség, ha külső áramforrást használunk  (külső tápegységet, vagy elemet, akkor itt tudjuk megtáplálni a panelt ). \n
+        A tápcsatlakozón  ajánlott bementi feszültség 7-12V között.\n
+        <b>Gnd</b> A panel test vagy negatív lába\n
+        <b>5V</b> A panel 5V-os tápfeszültség kimenete.\n
+        <b>3V3 kimenet</b> Az alaplapra szerelt FTDI chip által előállított  3,3V feszültség, maximális áramerősség 50mA (az összes többinek 40mA).\n
+        <b>USB csatlakozó</b> A panel 5V-os ellátására illetve a számítógéppel való kommunikációra használjuk.\n
+        <b>Portok terhelhetősége</b>\n
+        1 kivezetésen max 40 mA\n
+        1 porton max 150mA\n
+        1 táplábon max 200mA\n
+        A tápkivezetéseken, minél közelebb a chiphez, kerámiakondenzátorokkal védekezni kell a gerjedés ellen( általában 100nF a szokásos érték), e-nélkül nem garantálható a zajmentes működés.</string>
+    <string name="felépítés">A programok strukturális felépítése:</string>
+    <string name="felepites2">A program felépítése igen egyszerű.\n
+        A futáshoz szükséges minimum kód két részből áll:\n
+        <b>void setup (){ }</b>\n
+        <b>void loop (){ }</b>\n
+        Az első rész az alapbeállításokra a változók deklarálására, az alapbeállítások inicializálására szolgál. \n
+        A setup rész csak egyszer fut le. A használni kívánt pineket is itt adhatjuk meg illetve azt is, hogy a pin ki vagy bement legyen. Itt inicializáljuk a pineket.\n
+        A soros port beállítása is itt történik meg. A programba mindenfélekép be kel illeszteni még akkor is, ha semmit nem tartalmaz.\n
+        A második rész a tényleges feladat végrehajtást szolgálja. Ez a programrész az áramkőrt működteti, válaszol a külső kérésekre, vezérli a kimeneteket.\n </string>
+    <string name="felepites_prog"> void setup()\n
+        {\n
+        pinMode(led, OUTPUT); // itt beállításra kerül a 13-as pin kimenetként\n
+        int led = 13; }\n
+        void loop()\n
+        { digitalWrite(led, HIGH);\n
+        delay(1000);\n
+        digitalWrite(led, LOW);\n
+        delay(1000);\n
+        }\n
+        A második részben a végrehajtó rész 1mp-ig magas azután 1mp-ig alacsony szintet kapcsolunk a led kimenetre.</string>
+    <string name="vez_utasitasok">
+        <CDATA>
+        Először teszteli, hogy a megadott feltétel megvalósul-e, és akkor végrehajtja a kapcsos zárójelbe lévő műveletet.\n
+        x == y (x egyenlő y),\n
+        x! = y (x nem egyenlő y),\n
+      if (a &lt; =200)\n
+        {ledpin, HIGH} // ha „a” kisebb vagy egyenlő mint 200, akkor a led pin világít.\n
+        else { ledpin, LOW\n
+        } // egyéb esetben pedig a led kivezetés alacsony szinten, tehát a led nem világít.\n
+            x &lt;  y (x kisebb, mint y)\n
+        x > y (x nagyobb, mint y)\n
+        x &lt; = y (x kisebb vagy egyenlő y)\n
+        x> = y (x nagyobb, mint vagy egyenlő y)\n  \n
+        Fontos, hogy ha két ismeretlen egyenlőségét szeretnénk vizsgálni, akkor mindenfélekép kettő egyenlőség jelet kell használni, mert ellenkező esetben (pl x =10) értékadás történik.\n
+        Helyesen így használjuk x==10.\n
+            Az utasítás szintaktikailag így néz ki</CDATA>
+
+    </string>
+    <string name="vez_utasitasok1"> if (x > 120) {digitalWrite(LEDpin, HIGH)};\n
+        //ha x nagyobb mint 120 akkor a led kivezetés legyen magas szinten, tehát a led világít\n
+        if (x > 120) digitalWrite(LEDpin, HIGH); \n
+        if (x > 120) { digitalWrite(LEDpin, HIGH);}\n
+        if (x > 120) { digitalWrite(LEDpin1, HIGH); \n
+        digitalWrite(LEDpin2, HIGH); // ha x nagyobb mint 120 akkor Led 1 és 2 kivezetés is magas szinten }\n
+
+        </string>
+    <string name="if_else"> A többszörösen összehasonlító operátor. \n
+        A feltételes elágazás megadása.  \n
+        Itt is először tesztel és utána hajtja végre az utasítást.
+        Lehetővé teszi a többszörös összehasonlítást.
+    </string>
+    <string name="if_else_prog">if (a &lt; =200){ledpin, HIGH} // ha „a” kisebb vagy egyenlő mint 200 akkor a le pin világít\n
+else { ledpin, LOW} // egyéb esetben pedig a led kivezetés alacsony szinten tehát a led nem világít
+    </string>
+    <string name="igy_is_lehet">if (a>100)
+  {ledpin, HIGH} // ha „a” nagyobb mint 100 a led világít/  \n
+else if(a &lt; 50)
+  { ledpin, HIGH} vagy „a” kisebb mint 50 akkor a led világít \n
+else
+   {ledpin, LOW} egyébként a led nem világít</string>
+    <string name="for_ciklus"><![CDATA[Ciklus végrehajtására a „for” utasítás után a zárójelbe meg kell adni a paramétereket, a kapcsos zárójelbe pedig az utasítást ami végrehajtódik.\n
+        Ezért nevezzük előltesztelő ciklusnak. \n
+        for ( értékadás; ellenörzés; ciklusmag növelése) \n
+        {végrehajtandó utasítás};
+        for ( a=1; a<100; a++) /* értéket adunk „a”-nak ezután leellenőrizzük a feltételt, ha nem igaz, akkor végrehajtódik a ciklusmag növelése, ezután pedig a kapcsos zárójelben lévő utasítások.\n
+        A ciklus addig hajtódik végre ameddig „a” értéke el nem éri a 100-at, ekkor kilép a ciklusból és továbblép a program következő részére.*/\n
+        { digitalWrite(led, HIGH);  \n
+        delay(1000);\n
+        digitalWrite(led, LOW); \n
+        delay(1000); } \n
+]]></string>
+    <string name="pontosvesszo">Pontosvesszőt kell alkalmaznunk az utasítások után, illetve a programrészek elválasztásához.</string>
+    <string name="kapcsos_zarojel">A kapcsos zárójel definiálja a funkcióblokk elejét és végét. \n
+        Fontos, hogy a nyitó zárójelet mindenképp követnie kell egy záró zárójelnek, mert különben furcsa hibát produkál.\n
+        A fejlesztőkörnyezetben, ha a kezdő zárójelre kattintunk, akkor kiemeli a várható párját.\n
+        Programozáskor a legegyszerűbb ha egyszerre kitesszük a nyitó és záró zárójelet és közé írjuk a szöveget így nem felejtjük él a lezárást utána.</string>
+    <string name="adat_tipusok"><![CDATA[A változókat az adatok tárolására használhatjuk a programunkban.\n
+        A bennük tárolt érték a programban változhat.\n
+        A változókat használat előtt deklarálni kell és fel kell tölteni értékkel.\n
+        Például:\n
+        int bemenet1=0; // bemenet1 változót deklaráljuk, és értékét megadjuk 0-nak\n
+        bemenet1= analogRead(1); //bemenet1-nek a 1-es analog bemeneten mérhető értéket adjuk \n
+        A változó deklarálása több helyen is lehetséges. \n
+        A program legelején vagy a void setup()-ban vagy később a programban bárhól. \n
+        <b>Fontos<b> a megadás helye, mert ha a program elején adjuk meg akkor az a változó globális változó lesz (a program teljes terjedelmében érvényes). \n
+        Ha viszont egy ciklusba adunk meg változót, akkor a többi részben nem lesz érvényes. \n
+        ]]></string>
+    <string name="allandok"><![CDATA[HIGH | LOW : magas, alacsony szint:\n
+        Az alacsony 0V a magas pedig 5V. \n
+        INPUT | OUTPUT| : bemenet, kimenet. \n
+        TRUE | FALSE : A true az igaz a false a hamis. \n
+        integer constants : egész szám allandó.\n
+         floating point constants: legegő pontos állandó.]]></string>
+    <string name="Char"><![CDATA[A char olyan adattípus, amely 1 byte memóriát foglal és az ASCII táblázatnak megfelelően egy karakter értékét tárolja. \n
+        Mivel a karakterek mindig számként tárolódnak, ezért műveleteket is végrehajthatunk rajtuk. \n
+        Például „A” + 5 = 70. A értéke az ASCII táblázatban 65.]]></string>
+    <string name="boolen">Logikai változó amelynek két értéke lehet: igaz vagy hamis (true, false). 1 byte-ot foglal.</string>
+    <string name="byte2">A byte egy 8-bites előjel nélküli számot tárol, tehát az értéke 0 és 255 között lehet.\n
+        Pl. byte a=180</string>
+    <string name="Int">Egészrész adat-típus szám tárolására. \n
+    Az Arduino Uno 16 bites (2 bájtos) értékként tárolja a számot. E miatt az értéke maximum 32.767 -1 minimum értéke -32.768.\n
+     Az Arduino Due, 32 biten(4 bájton) tárolja az érték. Ennek eredménye az, hogy a sor minimum értéke-2.147.483.648 maximum értéke pedig 2,147,483,647 . \n
+     Példa:   int ledPin = 13;\n
+    <b>FONTOS!</b> \n
+	Ügyelni kell a túlcsordulásra.</string>
+    <string name="Int_prog">
+        int x;\n
+        x = -32768;\n
+        x = x - 1; // x értéke 32.767 lesz tehát megváltozik az előjel\n
+        x = 32767;\n
+        x = x + 1; // x értéke -32.768 lesz, tehát megváltozik az előjel</string>
+    <string name="unsigned_int">Előjel nélküli egész szám. \n
+        Értéke csak pozitív értéket vehet fel. \n
+        Uno és Atmega lapoknál az értéke tehát 0-tól 65,535 lehet.</string>
+    <string name="switch_case"><![CDATA[Az „if” ciklushoz hasonlóan különböző feltételek végrehajtására alkalmazzuk. \n
+        A „switch” állítás változó értékeit hasonlítja össze a” case” állításban  részletezett értékekkel, ha a két érték megegyezik, akkor lefut a „case”  állításban szereplő kód. \n
+        Minden „case” állítás végét a „break” kulcsszóval  adjuk meg, enélkül a következő kifejezés végrehajtása következne:]]></string>
+    <string name="switch_case_prog"><![CDATA[switch (var){\n
+        case 1:  //csináld ezt, ha a változó 1\n
+        break;\n
+        case 2:   //csináld ezt, ha a változó értéke egyenlő 2-vel\n
+        break;\n
+        default:  // ha semelyik nem egyezik, csinálja az itt megadott parancsokat}]]></string>
+    <string name="While"><![CDATA[Mindaddig folyamatosan fut le, amíg a kerek zárójelben lévő kifejezés hamissá nem válik. \n
+        Valaminek változnia kell a vizsgált változó ciklusban, különben a folyamat soha nem ér véget. \n
+        Ez történhet változó bevezetésével. \n
+        Szintaxisa a következő:]]></string>
+    <string name="while_prog2"><![CDATA[var = 0;\n
+        while(var < 200) {   // 200-szor lefutnak a ciklusban lévő utasítások\n
+        var++;\n
+        } ]]></string>
+    <string name="do_while">Hasonlít az előző utasításra, de itt a feltétel a ciklusmag után van. Tehát a ciklus egyszer mindenképpen lefut.\n
+        Ha a feltétel igaz, akkor többet nem is fut le a ciklus. \n
+        Ellenkező esetben addig fut ameddig a feltétel igaz nem lesz.</string>
+    <string name="do_while_prog2"><![CDATA[
+        do { a=readSensors (); // „a”értéke legyen egyenlő a readSensor-ról beolvasott értékkel delay 100; // ezután várunk 100 msec-ot }
+        while x<50; // ha az érték kisebb 50-nél akkor a ciklus kilép ha nem akkor újra lefut break:]]></string>
+    <string name="break2">A ciklusból való kilépésre használjuk a „do” a „for” és „while” ciklusoknál.</string>
+    <string name="break_prog"><![CDATA[
+        for (a = 0; a < 255; a ++)\n
+        { digitalWrite(PWMpin, a);\n
+        sens = analogRead(sensorPin);\n
+        if (sens > threshold){ a = 0; break;\n
+        }\n
+        delay(500);\n
+         }]]></string>
+    <string name="continue2"><![CDATA[Átugorja az ismétlések lefuttatását a ciklusokban (do, for, while), majd a  feltétel vizsgálatával és a további ismétlésekkel. ]]></string>
+    <string name="return2"><![CDATA[Befejezi a függvényt és visszaállítja a függvényből származó értéket a  meghívott értékre, ha kell. \n
+        Ebben az esetben az érték származhat bármilyen  változóból vagy állandóból. \n
+        Szintaxis, mindkettő forma érvényes: \n
+        return; \n
+        return value;  //value=érték, lehet bármilyen változó vagy állandó   \n
+        Példa: A következő függvény a szenzorból kiolvasott értéket hasonlítja össze a  küszöbértékkel:]]></string>
+    <string name="return_prog"><![CDATA[
+        int checkSensor(){\n
+        if (analogRead(0) > 400) {\n
+         return 1;   //érték nagyobb 400-nál, 1-re állítja (be)\n
+          else{\n
+           return 0; //kisebb, 0-ra állítja az értéket (ki)\n
+          }\n
+       } ]]></string>
+    <string name="goto2"><![CDATA[A program lefolyását áthelyezi a programban (általunk elnevezett) címkével megjelölt ponthoz, a következő paranccsal „goto label;”. \n
+        Ezután  visszatér és tovább futtatja a többit. \n
+        Szintaxis: \n
+        cimke: \n
+        goto cimke; // a programfutást a címkéhez küldi]]></string>
+    <string name="goto_prog"><![CDATA[
+        for( byte a = 0; a < 255; a++){\n
+          for(byte g = 255; g > -1; g--){\n
+           for(byte b = 0; b < 255; b++){\n
+            if (analogRead(0) > 250){ goto kisegites;\n
+        } // kisegites: általunk elnevezett cimke \n
+          // többi állítás ... \n
+             }\n
+          }\n
+       }\n
+       \n
+        kisegítés:]]></string>
+    <string name="word">16 bites előjel nélküli számot tárolhatunk ugyanaz mint az unsigned int. \n
+        word x=11111</string>
+    <string name="long2">Nagy méretű változók tárolására, 32 biten tárolja a számokat (4 byte), a minimum érték -2.147.483.648 a maximum érték 2,147,483,647.\n
+        long y=222.333</string>
+    <string name="unsigned_long"><![CDATA[Az előzőhöz hasonlóan 32 biten tárolja az értéket, de előjel nélkül. \n
+        Tehát az értéke  0 és 4294967295 (232-1) között lehet.]]></string>
+    <string name="short2">A short egy 16bites adattípus. \n
+        Minden arduino panel 16 biten (2bájton) tárolja az adatokat. \n
+        Értéke minimum -32.768 (-215) a maximum értéke 32.767 (215)- 1).</string>
+    <string name="float2"><![CDATA[Lebegőpontos szám. 32 biten (4 byte) tárolja a számokat. \n
+        Nagyobb felbontású, mint az int. Értéke  3.4028235E+38 és -3.4028235E+38 közötti. (3.4028236*1038 és -3.4028235*1038). \n
+        A számokat 7 tizedes pontossággal tudjuk megadni.]]></string>
+    <string name="double2">Dupla lebegő pontos szám. \n
+        Csak a due paneleknél mert a uno és és más atmega alapú lapok csak 4 byte-on tudják tárolni.</string>
+     <string name="karakterlanc"><![CDATA[A karakterláncok esetében a tömb deklarálásánál mindig figyelembe kell venni azt, hogy a tömb elemszáma nagyobb legyen 1-el mint a kívánt elemszám. \n
+        Erre azért van szükség mert a karakterlánc végét le kell zárni egy /0 elemmel. \n
+        A fordító program erről ismeri fel a karakterlánc végét. \n
+        A karakterláncot több félekép is deklarálhatjuk: \n
+        char Tomb1[8] = {\'a\', \'r\', \'d\', \'u\', \'i\', \'n\', \'o\'};  \n
+        // lezáró nélkül \n
+        char Tomb2[8] = {\'a\', \'r\', \'d\', \'u\', \'i\', \'n\', \'o\', \'0\'};  \n
+        // lezáró karakterrel \n
+        Szövegként idézőjelekben – ha nem adjuk meg az elemek számát, a fordító megszámolja a karaktereket és hozzáadja a végéhez a lezáró null karaktert, ahogy az üres helyet is feltölti, mint a példában.]]></string>
+    <string name="karakter_prog"><![CDATA[
+            char Tomb4[ ] = "arduino";\n
+            char Tomb5[8] ="arduino";\n
+            char Tomb6[15] = "arduino"; ]]></string>
+    <string name="karakterlanc2">Lehetséges a tömb definiálása lezáró elem nélkül is, de törekedjünk arra, hogy lezárjuk, mert a legtöbb függvény nincs erre felkészítve.\n
+        Lezárás nélkül a programban oda nem illő karakterek jelenhetnek meg.
+        Ha hosszú szöveget szeretnénk tárolni így is megtehetjük:</string>
+    <string name="karakter_prog2">
+        char Tomb[] = "az első rész”\n
+        " itt a második részlet"\n
+        " és a harmadik stb… /0";</string>
+    <string name="string_object">A string osztály kifejezetten szöveg alapú adattípusok manipulálására jött létre. \n
+        Az egyszerű karaktertömböktől eltérően az osztály példányain olyan függvényekkel is végezhetünk műveleteket, mint a vágás, az összefűzés, szövegrészletek keresése és cseréje. \n
+        Ugyan a string adattípus használata ebből kifolyólag több memóriát igényel, mint a karakterláncé, használatuk mégis sokszor megtérül.</string>
+    <string name="tomb">A tömb nem más, mint értékek/számok gyűjteménye, melyeket az ún. index számán (kb. sorban elfoglalt helyén át) érhető el. \n
+        A tömb bármely elemét meg lehet így címezni. A tömb indexelése a 0. azonosítóval kezdődik. A tömböt - a többi változóhoz hasonlóan - használat előtt deklarálni kell - és lehetőség szerint a kezdőértékkel feltölteni.\n
+        Példa:</string>
+    <string name="tomb_prog"> int elsotomb[]= {ertek0, ertek1, ertek2, ertek3…….}\n
+        int elsotomb [5]; // deklaráljuk az elsotomb nevű tömbünket amely 6 elemet tartalmaz\n
+        elsotomb [3] = 10; // értéket adunk a tömbünk 4. elemének</string>
+    <string name="tomb2">Kiolvasni a tömbből úgy tudunk, hogy hivatkozunk az index számára.\n
+        Például:</string>
+    <string name="pinMode">Az utasítás beállítja a megadott kivezetés viselkedését, azt hogy bemenet vagy kimenet, illetve bemenetként bekapcsolt felhúzó ellenállással működjön. \n
+        Szintaxisa: \n
+        pinMode(kivezetés,mód) \n
+        //először a kivezetés számát adjuk meg azután a felhasználási módot.</string>
+    <string name="pinmode_prog">
+        int ledpin=13\n
+        pinMode(ledpin,OUTPUT)</string>
+    <string name="pinMode2">A beépített felhúzó ellenállás használata esetén a megadott bemenetet egy belső ellenállással az 5V-ra csatlakoztatja.\n
+        Így külön ellenállás beépítésére már nincs szükség.\n
+        A példaprogram itt található:\n
+        http://www.arduino.cc/en/Tutorial/InputPullupSerial\n
+        vagy az arduino programban a file>minták>digital>digitalinputpullup\n
+        A nyomógomb bekötésének egy példája a belső felhúzó ellenállás használata esetén</string>
+    <string name="digital_write">Digitális kimenet szintjének a beállítása. A kimenet lehet magas (HIGH 5V ), vagy alacsony(LOW 0V) szint. \n
+        Szintaxisa:</string>
+    <string name="digitalwrite_prog">
+        digitalWrite(kivezetés, érték) // az érték lehet HIGH, vagy LOW\n
+        digitalWrite(13,HIGH) vagy pedig\n
+        int ledpin=13\n
+        digitalWrite(ledpin, LOW)</string>
+    <string name="digital_write2"><![CDATA[Példafeladat: \n
+    az arduino programban a file>minták>digital>BlinkWithoutDelay vagy a file>minták>basic>Blink]]></string>
+    <string name="digital_read">Digitális lábon lévő aktuális jelszint beolvasása. \n
+        Két értéket vehet fel alacsony vagy magas szint, tehát 1 vagy 0. \n
+        Szintaxisa:</string>
+    <string name="digital_read_prog">
+        digitalRead(7) vagy \n
+        int inputPin=3\n
+        digitalRead(inputPin)</string>
+    <string name="analog_reference">Konfigurálja az analóg referencia bemenetet.\n
+        Itt tudjuk beállítani az analóg referencia milyen módon működjön.\n
+        Szintaxisa:\n
+        analogReference( )\n
+        Default: alapértelmezett analóg referencia 5V illetve 3.3V (3.3V-os paneleknél)\n
+        Internal: belső 1.1V-os referencia használata \n
+        Internal1V1: külső 1.1V-os referencia \n
+        Internal2V56: külső 2.56V-os referencia</string>
+    <string name="analogRead">Beolvasás analóg kivezetésről. \n
+        Az analóg kivezetésre kerülő feszültséget átalakítja egy 0-1023 közötti értékre. \n
+        Ezt az átalakítást az arduino beépített áramköre egy analog digital converter végzi (analód digitális átalakító). \n
+        A 0V a 0 értéknek felel meg az 5V 1023 lesz. \n
+        Szintaxisa: \n
+        analogRead(0) // beolvasás az 0-ás analóg bemenetről a bekötés lent a képen A potméter középső(változó) lábát kell az analóg lábra bekötni</string>
+    <string name="analogRead_prog">int sensorPin = A0; // kijelőljük, hogy melyik lábra kötjük a potenciómétert \n
+        int ledPin = 13; // kijelőljük a led melyik lábra van kötve\n
+        int sensorValue = 0; // deklaráljuk a változót és értélet adunk neki \n
+        void setup() { \n
+         pinMode(ledPin, OUTPUT); //dekleráljuk a ledPin kivezetést kimenetként \n
+        }\n
+        void loop() { \n
+         sensorValue = analogRead(sensorPin); //legyen egyenlő a sensorValue változó a sensorPin értékével \n
+         digitalWrite(ledPin, HIGH); // a ledPin legyen magas szinten \n
+         delay(sensorValue); // időzítés a beolvasot időig miliszekundumban \n
+         digitalWrite(ledPin, LOW); / a ledPin kimenet legyen alacsony szinten \n
+         delay(sensorValue); // időzítés a beolvasot időig miliszekundumban \n
+        }</string>
+    <string name="pwm"><![CDATA[Analóg írás a PWM kimenetekre. \n
+        Impulzus-szélesség moduláció(pulse-width modulation), PWM pinek működése. \n
+        Ez a jel  0-t és 1-et is tud értékként felvenni, mint minden digitális jel.\n
+        Amplitúdója állandó, de változó szélességű impulzusokból áll, így befolyásolható a kimeneten létrejövő tényleges feszültség.]]>
+        </string>
+    <string name="tone">Megadott frekvenciájú hang (négyszögjel) generálására szolgáló utasítás. \n
+        Az időtartam megadása kötelező, mert különben a hang addig folytatódik ameddig a noTone() utasítás meg nem szakítja. \n
+        Csak egy hangot lehet egyszerre megszólaltatni. A frekvenciát Hertz-ben, az időtartamot pedig milliszekundumban kell megadni. \n
+        A hangkeltéshez szükséges egy 8 ohmos hangszóró és egy 100 ohmos ellenállás amit a lenti kép alapján kell csatlakoztatni a panelhez.</string>
+    <string name="tone2">A szintaxisa a következő \n
+        tone(kivezetés, frekvencia)\n
+        itt folyamatos lesz a hang \n
+        tone(kitone(9,500,1000) // a 9-es kivezetésen 500Hz-es 1000miliszekundumos jel\n
+        tone(9,1000) // a 9-es kivezetésen 1kHz-es jel (itt nincs időtartam megadva)vezetés, frekvencia, időtartam) \n
+        itt pedig a megadott időpontig szól Az időtartamot milisekundumban kell megadni \n
+        Például:</string>
+    <string name="tone3">tone(9,500,1000) // a 9-es kivezetésen 500Hz-es 1000miliszekundumos jel \n
+        tone(9,1000) // a 9-es kivezetésen 1kHz-es jel (itt nincs időtartam megadva)</string>
+    <string name="tone4">A hang kimenet tiltása. \n
+        Szintaxisa:</string>
+    <string name="tone5">Ezzel az utasítással megmérhetjük egy adott digitális bemenetre kerülő impulzus megadott állapotban lévő hosszát. \n
+        Paraméterei: \n
+        pulseIn (pin, érték, időtúllépés) \n
+        Pin: amely láb értéket szeretnénk megmérni \n
+        Érték: HIGH, LOW magas vagy alacsony állapotot figyeljen Időtúllépés: (nem kötelező megadni) arra szolgál, hogy maximálisan mekkora ideig figyelje az impulzust.\n
+        Szintaxisa:</string>
+    <string name="ton6"><![CDATA[Ultrahang szenzor visszaverődési jelének a kiértékelésére tökéletesen használható utasítás. \n
+        Az utasítás visszatérési értéke az impulzus hossza mikroszekundumban. 0 értéket ad vissza, ha nem volt impulzus. \n
+        Egy ultrahang szenzorral kipróbálható, a példaprogram az arduino program file>minták>sensor>ping helyen érhető el.]]></string>
+    <string name="ido">Ezzel az utasítással lekérdezhetjük a bekapcsolástól eltelt időt milliszekundumban. \n
+        Az érték körülbelül 50 nap alatt túlcsordul és az értéke 0 lesz. \n
+        Példa:</string>
+    <string name="ido2">unsigned long time;\n
+        void setup(){\n
+        Serial.begin(9600); \n
+        } \n
+        void loop(){ \n
+        Serial.print("Idő: "); soros portra küldjük az idő feliratot \n
+        time = millis(); \n
+        Serial.println(time); //soros portra küldjük az eltelt időt \n
+        delay(1000); //1000 msec várakozás \n
+}</string>
+    <string name="ido3">Az előző utasítás párja csak itt mikro szekundumban adja meg az értéket. \n
+        Ügyelni kell arra, hogy a számláló kb 70 percenként túlcsordul és az értéke 0 lesz.</string>
+    <string name="ido4">Szünetelteti a program futását a megadott paraméterig. \n
+        Szintaxisa: \n
+        dalay(ms) //ms milliszekundumban megadva</string>
+    <string name="ido5">Szünetelteti a program futását a megadott paraméterig. \n
+        Mikroszekundumban megadva.</string>
+    <string name="math1">A megadott két paraméterből a kisebb értékét adja vissza.</string>
+    <string name="math2">min(x ,y); \n
+        sensorertek = min (sensor1, 100) // biztosítható, hogy a sensorertek változó soha nem lesz nagyobb mint 100</string>
+    <string name="math3">Az előzővel ellentétben a két érték közül a nagyobbat adja vissza.</string>
+    <string name="math4">sensorertek2 = max (sensor2, 50) // biztosítható, hogy a sensorertek2 változó soha nem lesz kisebb mint 50</string>
+    <string name="math5">A megadott paraméter abszolút értékét adja vissza. \n
+        abs(x) //ha x=0 akkor a visszaadott érték 0, ha x negatív akkor az abszolút értékea visszaadott érték.</string>
+    <string name="math6">A megadott értéket korlátozza a két határérték közé. Nevezhetjük egy úgynevezett limiternek is.\n
+        Szintaxisa: \n
+        constrain(x, a, b); // ahol x értékét korlátozza a és b közé.\n
+        Visszaadási értéke: ha a &lt; x &lt; b akkor x, ha x &lt; a akkor a, és ha x>b akkor pedig b.\n
+        Szintaxisa:</string>
+    <string name="math7">constrain (változó,alsóhatár,felsőhaár)\n
+        constrain (x, 25,250) // tehát x 25 és 250 közti számot fog felvenni</string>
+    <string name="math8"><![CDATA[Arányosan szétosztja egy számtartományból egy másik számtartományba. \n
+        Az alsó és felső értékeket rendeli egymáshoz és a számokat ehhez igazítja arányosan. \n
+        Ez az utasítás csak egész számokkal működik. \n
+        map(value, fromLow, fromHigh, toLow, toHigh)\n
+        value: az érték, amit arányosítani akarunk (gyakran a változónk neve) \n
+        fromLow: az aktuális értékünk legalsó határa \n
+        fromHigh: az aktuális értékünk legfelső határa \n
+        toLow: a cél érték legalsó határa \n
+        toHigh: a cél érték legfelső határa \n
+        Az alábbi program és áramkőr a map utasítás használatára mutat be egy példát. \n
+        Az áramkőr egy fotóellenállás változó értéke szerinti frekvenciával szólaltatja meg a hangszórót.]]></string>
+    <string name="math9"><![CDATA[void setup() { //soros kommunikáció inicializálása): \n
+        Serial.begin(9600);\n
+            }\n
+        void loop() { \n
+        // read the sensor:   \n
+        int sensorReading = analogRead(A0); // a szenzor értékének a beolvasása a sensorReadind változóba \n
+        Serial.println(sensorReading); \n
+        //a sensorReading kiíratása a soros portra \n
+        // a map utasítással skálázzuk az analóg bemenetet(ami 400-1000-ig változik a szenzor állapotától függően) 120-1500-as határ közé (ez lesz a kimeneti tartomány) \n
+        int thisPitch = map(sensorReading, 400, 1000, 120, 1500); \n
+        // a thisPitch értékét fogjuk megszólaltatni \n
+        tone(9, thisPitch, 10); \n
+        delay(1); // 1milisekudumos időzítés a stabilitás miatt \n
+        }]]></string>
+    <string name="math10">A megadott szám hatványértékét számolja ki.</string>
+    <string name="math11">pow(szám, hatványkitevő) \n
+        pow(5,7) // például 5 a 7.-en tehát 78125</string>
+    <string name="math12">A megadott szám négyzetgyökét adja vissza. \n
+        sqrt(25) // a 25 négyzetgyöke tehát 5</string>
+    <string name="trig1">Egy megadott szög szinuszát számolja ki. A visszaadott érték -1 és 1 közti szám, és a típusa pedig „double”. \n
+        A szöget radiánban kell megadni.</string>
+    <string name="trig2">Egy megadott szög koszinuszát számolja ki. A visszaadott érték -1 és 1 közti szám, és a típusa pedig „double”. \n
+        A szöget radiánban kell megadni.</string>
+    <string name="trig3">Egy megadott szög szinuszát számolja ki. A visszaadott érték a negatív és a pozitív végtelen közti szám, és a típusa pedig „double”. \n
+        A szöget itt is radiánban kell megadni.</string>
+    <string name="random1">Ezzel a paranccsal egy pszeudo-random szám generátort(véletlem szám) inicializálunk. \n
+        Paramétere egy „long” vagy egy „integer” lehet. \n
+        Nincs visszatérő értéke.</string>
+    <string name="random2"><![CDATA[random(max) \n
+        random(min,max) \n
+        Pszeudo random számokat generál. Egy random szám értéket ad vissza a két szélsőérték között „long” formában. \n
+        min: a random érték alsó határa, nem kötelező megadni – ilyenkor 0 \n
+        max: a random érték felső határa (ami már nem tér vissza csak az eggyel kisebb szám) ]]></string>
+    <string name="bit1"><![CDATA[Kiemeli a legalacsonyabb helyi értékű (tehát a jobboldali) bájtot a változóból. \n
+        Visszatérő értéke a bájt. \n
+        x: bármilyen típusú érték Például: \n
+        lowByte(1234) //a visszaadott érték a 4]]></string>
+    <string name="bit2"><![CDATA[Az előzőhöz hasonló csak itt a legnagyobb helyi értékű  (tehát a bal oldali első) bájtot emeli ki a változóból.\n
+        highByte(1234) // itt a visszakapott érték az 1]]></string>
+    <string name="megszakitas1">Eddigi példáinkban csak lineáris programok voltak, de készülhet olyan program ahol a futás közben be kell azonnal avatkoznunk a programunk működésébe.\n
+        Például egy gépben elakad a munkadarab és a gép védelme miatt nincs idő a késlekedésre az ilyen esetekben azonnali beavatkozásra van szükség \n
+        Lehet olyan helyzet ahol nincs idő arra várni, hogy a program elérjen egy gombfigyelő részhez, főleg egy processzor igényes feladat alatt. \n
+        Például egy rendszer vészleállító gomb kezelése, ekkor sincs idő a késlekedésre, itt azonnali beavatkozás kell az élet és a testi épség megőrzése miatt. \n
+        A megszakítás bekövetkezésekor egy azonnali, belső programfolyamat kerül végrehajtásra. A program állapota a következő utasítás végrehajtása után elmentésre kerül, így a program futása a megszakítás-progamban folytatódik.\n
+        Ha megszakítás-program véget ér, az elmentett állapot visszaállításra kerül, és a főprogram a megszakítási ponttól folytatja a végrehajtást.</string>
+    <string name="megszakitas2"><![CDATA[attachInterrupt(1, prog.cimke, működési forma ); \n
+        Ezzel az utasítással rendelhetjük a chip adott kivezetéséhez a megszakítást (D2: INT0, D3: INT1). \n
+        A megszakítás bekövetkeztekor egy program-címkére kell ugrani. \n
+        Ez a tényleges megszakítási alprogram. \n
+        Itt ez a „blink()” névre hallgat. \n
+        Harmadik paraméter a megszakítás érzékelésének finomhangolása, mivel többféle lehet: \n
+        Működési formái: \n
+        LOW: ha a gombot folyamatosan nyomjuk, folyamatosan  megszakítást hív. \n
+        RISING: alacsonyból magas logikai jelszint változás. \n
+        FALLING: magas szintből alacsony szintre kerül. \n
+        CHANGE: logikai jelszint megváltozik.]]></string>
+    <string name="megszakitas3">Int pin = 13; \n
+        volatile int state = LOW;\n
+        void setup() { \n
+        pinMode(pin, OUTPUT); \n
+        attachInterrupt(0, blink, CHANGE); \n
+        }\n
+        void loop() {\n
+        digitalWrite(pin, state);\n
+        }\n
+        void blink() {\n
+        state = !state; \n
+        }</string>
+    <string name="megszakitas4"><![CDATA[Azon változókat, melyeket a főprogramban és a megszakításban is használunk a volatile jelzővel kell ellátni. \n
+        Ezzel utasítjuk a programunkat, hogy a megszakításban a változó értékének megváltozása szándékos és nem egy kóbor, szabad memóriaterület adatváltozása! \n
+        Ha nem adnánk meg, akkor részlegesen vagy teljesen visszaállításra kerülne (lsd: interrupt sok mindent elment, hiszen  megszakít egy futó programot, majd utána visszaállítja a megváltozott környezetet és a főprogramra adja vissza a vezérlést).”  \n
+        Megszakítási prioritási sorrend.  \n
+        A megszakítás oka az adatlapok szerinti prioritásba rendezettek. \n
+        A következő szerint: \n
+        A Reset, legalacsonyabb szintű a belső nem felejtő memória írása/olvasása. \n
+        A külső megszakítás az első harmadban foglal helyet. \n
+        Megszakítás-szabályok:\n
+        -Ha a főprogram fut és két megszakítás azonos pillanatban következik be, akkor a magasabb prioritású kerül először végrehajtásra.\n
+        -Egy futó megszakítás nem szakítható meg, tehát csak egyetlen megszakítási szint érhető el a chipben.\n
+        -Ha megszakítás alatt egy másik megszakítás érkezik, akkor az egy jelzőbitet bebillent (van/nincs). \n
+        Az épp futó megszakítás befejezése után a megszakítás futása közben beesett megszakítások a prioritás szerinti sorban végrehajtódnak. \
+        Az, hogy egy megszakítás mennyi alkalommal esett be, azt nem számolja.\n
+        A második azonos megszakítás-eseménytől így ezek nem tárolódnak. \n
+        Ezen szabályok következményeként a megszakítások - amíg ők futnak - a chip fő működését és a többi megszakítást blokkolják.\n
+        Tehát nagyon fontos, hogy a megszakításkor futó programrész legyen minél rövidebb!]]></string>
+    <string name="megszakitasok">Kezdjük az elején: mi is az a megszakítás? \n
+        A megszakítás egy külső jel ami megállítja az aktuális program futását, elvégzi a saját függvényét, majd vissza adja a vezérlést a programnak. \n
+        A programunk megszakítás után ott folytatódik ahol a megszakítás előtt abba maradt. \n
+        Miért jó ez nekünk? \n
+        Amikor több felé kell figyelni vezérlőnknek és közben még műveleteket is kell végeznie a háttérben annyira leterhelődik , hogy nem lenne stabil a működése. \n
+        A megszakításoknak ez az előnye, nem kell figyelni az érzékelőt vagy az eszközt, ha megadott változás történik az eszköz kimenetén. A megszakítás kérelem aktiválódik és a megfelelő függvények lefutnak. \n
+        Tehát nem terheli feleslegesen a vezérlőnket. \n
+        Az arduino négy függvényt használ a megszakítások kezelésére ezek a következők: \n
+        interrupts() – megszakítás engedélyezése. \n
+        Ezt csak akkor használjuk ha előtte már letiltottuk a megszakításokat( néhány kód részletnél kritikus lehet az időzítés használata, itt érdemes letiltani). Alapból engedélyezettek. \n
+        noInterrupts() – megszakítások letiltása az előzőekben leírtak miatt. Nem törli a megszakítást csak felfüggeszti azt. \n
+        attachInterrupt() – megszakítás beállítása az adott lábon. \n
+        A következő paramétereket használja:\n
+        attachInterupt(megszakítás száma, függvény, aktiválójel);\n
+        Megszakítás száma: itt nem a pinek számát adjuk meg hanem a lábakhoz rendelt megszakítások számát. Az Uno esetén ez 0 és 1, a 0-s int. a 2-s pinhez van rendelve, az 1-s int. a 3-ashoz.\n
+        Függvény: a megszakításkor végrehajtandó függvény\n
+        Aktiválójel: ez aktiválja a megszakítást, a megszakításoknál négy féle lehet:\n
+        LOW: az interrupt bemenet alacsony állapotban van\n
+        CHANGE: ha a bemenet értéke változik, magasról alacsonyra vagy alacsonyról magasra\n
+        RISING: ha a bemeneti jel alacsonyról magasra változik\n
+        FALLING: ha a bemeneti jel magasról alacsonyra vált.</string>
+    <string name="megszakitasok2">Az interrupt bemenetek: \n
+        Board int.0 int.1 int.2 int.3 int.4 int.5. \n
+        Uno 2 láb 3 láb     x      x     x     x \n
+        Mega    2     3     21    20    19    18 \n
+        detachInterrrupt() – az adott megszakítás letiltása, a zárójelen belül egyetlen paraméter található:\n
+        a letiltandó megszakítás száma (Unonál 0 vagy 1).</string>
+    <string name="fooldal">Ez a program a szakdolgozatom részeként készült el.\n
+        A program szabadon használható és reklámmentes.\n
+        Ha valami hibát találsz, a lenti elérhetőségen tudsz velem kapcsolatot létesíteni:\n
+    </string>
+    <string name="fooldal2">A programot készítette: Németh Zoltán\n
+        2018© zoole.dev\n
+        Kérlek ha felhasználod az alkalmazást, akkor jelöld meg a készítőt!
+        Ne add el, mert ez egy ingyenes program,ami  azért készült ,hogy mindenki szabadon ismerkedhessen az arduinoval. \n
+        \n
+        Köszönöm, hogy kipróbáltad a programot! \n
+        Remélem elnyerte tetszésed!</string>
+    <string name="kedves">Üdvözöllek kedves felhasználó!</string>
+    <string name="email_cim">zoole.dev@gmail.com</string>
+    <string name="utasitasok">Az alábbi felsorolásban az arduino utasításai vannak felsorolási szinten. \n
+        Az utánna lévő menűkben részletesen bemutatásra kerülnek az utasítások. \n
+        Ha valami utasítás kimaradt, az a kezdő szinten még nem annyira fontos.</string>
+    <string name="utasitasok2">
+        <b>--Digital I/O</b> \n
+        digitalRead() \n
+        digitalWrite() \n
+        pinMode() \n
+        <b>--Analog I/O </b>\n
+        analogRead() \n
+        analogReference() \n
+        analogWrite() \n
+        <b>--Zero, Due  MKR Family </b>\n
+         analogReadResolution() \n
+         analogWriteResolution() \n
+         <b>--Advanced I/O</b> \n
+         noTone() \n
+         pulseIn() \n
+         pulseInLong() \n
+         shiftIn() \n
+         shiftOut() \n
+         tone() \n
+         Time delay() \n
+         delayMicroseconds() \n
+         micros() \n
+         millis() \n
+         Math abs() \n
+         constrain() \n
+         map() qn
+         max() \n
+         min() \n
+         pow() \n
+         sq() \n
+         sqrt() \
+        <b>--Trigonometry </b>\n
+         cos() \n
+         sin() \n
+         tan() \n
+        <b>--Characters</b>\n
+         isAlpha() \n
+         isAlphaNumeric() \n
+         isAscii() \n
+         isControl() \n
+         isDigit() \n
+         isGraph() \n
+         isHexadecimalDigit() \n
+         isLowerCase() \n
+         isPrintable() \n
+         isPunct() \n
+         isSpace() \n
+         isUpperCase() \n
+         isWhitespace() \n
+        <b>--Random Numbers </b>\n
+         random() \n
+         randomSeed() \n
+        <b>--Bits and Bytes </b>\n
+         bit() \n
+         bitClear() \n
+         bitRead() \n
+         bitSet() \n
+         bitWrite() \n
+         highByte() \n
+         lowByte() \n
+        <b>--External Interrupts </b>\n
+         attachInterrupt() \n
+         detachInterrupt() \n
+        <b>--Interrupts </b>\n
+         interrupts() \n
+         noInterrupts() \n
+        <b>--Communication </b>\n
+         Serial \n
+         stream \n
+        <b>--USB </b>\n
+         Keyboard \n
+         Mouse
+    </string>
+    <string name="kommunikacio">Az Arduino mikrovezérlőjén (AVR ATmega) van két olyan I/O csatorna (D0 és D1), amelyeknek megkülönböztetett funkciójuk van. A két kivezetést együtt soros portnak nevezzük, amin keresztül adatokat cserélhetünk a környezet és a mikrovezérlő között. \n
+        Az egyik csatorna az adatok fogadásáért (Rx – receiver), a másik pedig küldéséért felel (Tx – transmitter).</string>
+    <string name="kommunikacio2">A soros átvitel szekvenciálisan zajlik, vagyis egy időben egyetlen bit halad át a csatornán. Ennek megfelelően a kommunikáció sebességét a másodpercenként átvitt bitek számával mérjük és BPS-sel (Bits Per Second = Bit per másodperc) jelöljük. \n
+        Az Arduino maximális átviteli sebessége 115200 bit másodpercenként.</string>
+    <string name="kommunikacio3">Ahhoz, hogy számítógépünk könnyedén kapcsolódhasson a mikrovezérlőhöz, az Arduino tartalmaz egy soros USB átalakítót (FTDI), mely a fent említett csatornákhoz kapcsolódik és létrehozza a kapcsolatot az univerzális soros busszal (USB). \n
+        Az adatok ugyan bitenként, de egymástól jól elhatárolható csomagokban közlekednek. \n
+        Ezek a blokkok START jelből, 8 bit adatból (1 byte) és két STOP jelből állnak.</string>
+    <string name="blokk_megjegyzés">Programunkhoz tudunk magyarázatokat írni.\n
+        A fordító figyelmen kívül hagyja, nem foglalja a helyet. Tehát nem kell attól félni, hogy fogyasztja a program memóriát.\n
+        A későbbi hibakeresést nagyban elősegíti, ha a programunkat megfelelően kommenteljük.</string>
+
+</resources>

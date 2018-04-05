@@ -1,0 +1,70 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.zoole.myapplication7.FeszPin">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Feszültség Pinek"
+                    style="@style/bekezdes" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/szovegtorzs"
+                    android:text="@string/fesz_pin1" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Arduino uno"
+                    style="@style/szovegtorzs"/>
+
+                <ImageView
+                    android:id="@+id/imageView10"
+                    android:layout_width="match_parent"
+                    android:layout_height="359dp"
+                    android:src="@drawable/arduino10" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Arduino nano"
+                    style="@style/szovegtorzs"/>
+
+                <ImageView
+                    android:id="@+id/imageView12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/nano_labak" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Arduino mega"
+                    style="@style/szovegtorzs"/>
+
+                <ImageView
+                    android:id="@+id/imageView13"
+                    android:layout_width="match_parent"
+                    android:layout_height="245dp"
+                    android:src="@drawable/arduino_mega_pin" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+</FrameLayout>

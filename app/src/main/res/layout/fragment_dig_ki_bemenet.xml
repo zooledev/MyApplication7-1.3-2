@@ -1,0 +1,112 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.zoole.myapplication7.DigKiBemenet">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:fillViewport="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white">
+
+            <TextView
+                style="@style/bekezdes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Digital ki és bemenetek" />
+
+            <TextView
+                style="@style/bekezdes2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="pinMode()" />
+
+            <TextView
+                style="@style/szovegtorzs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/pinMode" />
+
+            <TextView
+                style="@style/program"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="pinMode(13,output)" />
+
+            <TextView
+                style="@style/szovegtorzs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Mindkét megoldás helyes." />
+
+            <TextView
+                style="@style/program"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/pinmode_prog" />
+
+            <TextView
+                style="@style/szovegtorzs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/pinMode2" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/pinmode" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="digitalWrite()"
+                style="@style/bekezdes2" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/digital_write"
+                style="@style/szovegtorzs"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/digitalwrite_prog"
+                style="@style/program"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/digital_write2"
+                style="@style/szovegtorzs"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="digitalRead()"
+                style="@style/bekezdes2"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/digital_read"
+                style="@style/szovegtorzs"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/digital_read_prog"
+                style="@style/program"
+                android:layout_marginBottom="30dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+</FrameLayout>

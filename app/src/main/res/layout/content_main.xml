@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.zoole.myapplication7.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+   <FrameLayout
+       android:id="@+id/fragment"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       >
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@color/white"
+          android:orientation="vertical">
+
+         <TextView
+             style="@style/bekezdes"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="@string/kedves" />
+
+         <TextView
+             style="@style/szovegtorzs"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="@string/fooldal" />
+
+         <TextView
+             style="@style/szovegtorzs"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="zoole.dev@gmail.com" />
+
+         <TextView
+             style="@style/szovegtorzs"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="@string/fooldal2" />
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:text="Az alkalmazás Android studio programmal készült."
+             style="@style/szovegtorzs"/>
+
+         <ImageView
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:src="@drawable/androidstudiologo" />
+
+
+      </LinearLayout>
+
+
+
+
+   </FrameLayout>
+
+</RelativeLayout>

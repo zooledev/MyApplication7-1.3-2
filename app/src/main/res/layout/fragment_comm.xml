@@ -1,0 +1,51 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.zoole.myapplication7.Comm">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:fillViewport="false"
+        android:background="@color/white">
+
+         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white">
+
+             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Kommunikáció"
+                style="@style/bekezdes"/>
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:text="@string/kommunikacio"
+                 style="@style/szovegtorzs"/>
+             <ImageView
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:src="@drawable/arduino_rxtx"
+                 android:paddingTop="15dp"
+                 android:paddingBottom="15dp"/>
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:text="@string/kommunikacio2"
+                 style="@style/szovegtorzs"/>
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:text="@string/kommunikacio3"
+                 style="@style/szovegtorzs"/>
+
+    </LinearLayout>
+
+</ScrollView>
+
+</FrameLayout>
